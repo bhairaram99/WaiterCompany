@@ -39,8 +39,8 @@ export default function Header() {
               <UserCircle2 className="w-6 h-6 text-primary-dark" />
             </div>
             <div>
-              <div className="font-semibold text-primary-dark">Alex Manager</div>
-              <div className="text-xs text-accent-brown">alex.manager@example.com</div>
+              <div className="font-semibold text-primary-dark">priyanshu Manager</div>
+              <div className="text-xs text-accent-brown">priyanshu.manager@example.com</div>
             </div>
           </div>
           <div className="text-sm text-primary-brown">
