@@ -1,6 +1,6 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
-const COLORS = ["#8E726E", "#0BA52A"];
+const COLORS = ["#C1A5A1", "#B18E8A"];
 
 function renderPercentageBadge({ cx, cy, midAngle, outerRadius, percent }) {
   const RAD = Math.PI / 180;
@@ -24,7 +24,7 @@ export default function CustomerTraffic({ data }) {
   return (
     <div>
       <div className="flex justify-between mb-2">
-        <span className="font-bold text-[18px]">Customer Traffic</span>
+        <span className="font-bold text-heading-xs">Customer Traffic</span>
         <span className="text-xs border rounded px-2 py-1 text-primary-dark bg-light-bg">Today</span>
       </div>
       <div className="relative flex flex-col items-center">
@@ -37,7 +37,7 @@ export default function CustomerTraffic({ data }) {
               cx="50%" cy="50%"
               innerRadius={55}
               outerRadius={80}
-              startAngle={90}
+              startAngle={180}
               endAngle={-270}
               labelLine={false}
               label={renderPercentageBadge}
@@ -56,11 +56,11 @@ export default function CustomerTraffic({ data }) {
         </div>
       </div>
       <div className="flex justify-center gap-6 mt-2 text-[14px]">
-        <span className="flex gap-1 items-center text-accent-brown">
-          <span className="w-3 h-3 rounded bg-accent-brown inline-block" />New Customers 25%
+        <span className="flex gap-1 items-center" style={{color: '#B18E8A'}}>
+          <span className="w-3 h-3 rounded inline-block" style={{backgroundColor: '#C1A5A1'}} />New Customers 25%
         </span>
-        <span className="flex gap-1 items-center text-green">
-          <span className="w-3 h-3 rounded bg-green inline-block" />Repeated 75%
+        <span className="flex gap-1 items-center" style={{color: '#B18E8A'}}>
+          <span className="w-3 h-3 rounded inline-block" style={{backgroundColor: '#B18E8A'}} />Repeated 75%
         </span>
       </div>
     </div>

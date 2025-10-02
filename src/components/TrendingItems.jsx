@@ -22,9 +22,9 @@ export default function TrendingItems({ data }) {
   const maxValue = Math.max(...data.map(d => d.value));
   return (
     <div>
-      <span className="font-bold text-[18px] mb-2 block">Trending Items</span>
+      <span className="font-bold text-heading-xs mb-2 block">Trending Items</span>
       <ResponsiveContainer width="100%" height={200}>
-        <BarChart data={data} barCategoryGap="20%">
+        <BarChart data={data} barCategoryGap="28%">
           <CartesianGrid vertical={false} stroke="#F0EAE9" strokeDasharray="3 3" />
           <XAxis dataKey="name" style={{ fontSize: 12 }} />
           <YAxis style={{ fontSize: 12 }} tickFormatter={(v) => `${Math.round(v/1000)}k`} />

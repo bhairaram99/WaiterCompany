@@ -3,7 +3,7 @@ import CustomerTraffic from './components/CustomerTraffic';
 import TrendingItems from './components/TrendingItems';
 import RushHours from './components/RushHours';
 import StatCard from './components/StatCard';
-import { FileText, FileCheck2, FileClock, FileX, Calendar as CalendarIcon } from 'lucide-react';
+import { FileText, FileCheck2, FileClock, FileX } from 'lucide-react';
 import { revenueData, customerTraffic, trendingItems, rushHours } from './data';
 
 export default function OverviewDashboard() {
@@ -12,11 +12,7 @@ export default function OverviewDashboard() {
       {/* divider removed for single clean header area */}
 
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-[16px] font-semibold">Today's Performance</h2>
-        <button className="flex items-center gap-2 border bg-white rounded-lg px-3 py-1 text-sm shadow-md">
-          <CalendarIcon className="w-4 h-4 text-accent-brown" />
-          <span>Sep 15, 2025</span>
-        </button>
+        <h2 className="text-text-m font-semibold">Today's Performance</h2>
       </div>
 
       {/* TOP: revenue + 4 stat cards in one grid */}
@@ -30,8 +26,8 @@ export default function OverviewDashboard() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 h-full">
             <StatCard title="Total Orders" value={202} Icon={FileText} badgeText="10 orders" />
             <StatCard title="Completed Orders" value={190} Icon={FileCheck2} badgeText="10 orders" />
-            <StatCard title="Pending Orders" value={10} Icon={FileClock} badgeText="10 orders" />
-            <StatCard title="Cancelled Orders" value={190} Icon={FileX} badgeText="10 orders" />
+            <StatCard title="Pending Orders" value={10} Icon={FileClock} badgeText="10 orders" badgeColor="green" />
+            <StatCard title="Cancelled Orders" value={190} Icon={FileX} badgeText="10 orders" badgeColor="green" />
           </div>
         </div>
       </div>
